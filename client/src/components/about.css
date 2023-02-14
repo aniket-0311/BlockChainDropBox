@@ -1,0 +1,29 @@
+.About{
+    height: 100vh;
+}
+/* .title{
+    border-bottom: 2px solid white;
+} */
+.title_head{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+}
+.bg_gradient_about{
+    background:-moz-linear-gradient(90deg, #000000 0%, #213232 50%, #000000 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, #000000 0%, #213232 50%, #000000 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, #000000 0%, #213232 50%, #000000 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, #000000 0%, #213232 50%, #000000 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, #000000 0%, #213232 50%, #000000 100%);
+}
