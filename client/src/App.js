@@ -8,25 +8,30 @@ import "./App.css";
 import Home from "./components/home";
 import About from "./components/about";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import Team from "./components/team";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/navbar";
+import footer from "./components/footer";
 
 function App() {
-  
+
   return (
     <BrowserRouter>
-    <div className="App"> 
-    <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/about" element={<><Navbar/><About /></> } />
-        <Route path="/home" element={<Home />} />
+      <div className="App">
+        <div className="gradient_bg">
 
-    </Routes>
-    </div>
+          <Routes>
+            <Route path="/" element={<><Navbar /><Dashboard /></>} />
+            <Route path="/about" element={<><Navbar /><About /></>} />
+            <Route path="/home" element={<><Navbar/> <Home /> </>} />
+            <Route path="/team" element={<><Navbar /><Team /></>} />
+
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
-      
-    
+
+
   );
 }
 
