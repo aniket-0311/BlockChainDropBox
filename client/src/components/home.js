@@ -47,7 +47,7 @@ function Home() {
   }, []);
   return (
     <>
-    {!modalOpen && (
+      {!modalOpen && (
         <button className="share" onClick={() => setModalOpen(true)}>
           Share
         </button>
@@ -56,14 +56,17 @@ function Home() {
         <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
       )}
       <div className='home'>
-      <h1 style={{ color: "white" }}>Decentralised Dropbox</h1>
-        <div className="bg"></div>
-        <div className="bg bg2"></div>
-        <div className="bg bg3"></div>
+        <div className='accountHeader'>
 
-        <p style={{ color: "white" }}>
-          Account : {account ? account : "Not connected"}
-        </p>
+          <h1 style={{ color: "white" }}>Decentralised Dropbox</h1>
+          {/* <div className="bg"></div>
+        <div className="bg bg2"></div>
+      <div className="bg bg3"></div> */}
+
+          <p className='accountStatus'>
+            Account : {account ? account : "Not connected"}
+          </p>
+        </div>
         <FileUpload
           account={account}
           provider={provider}
