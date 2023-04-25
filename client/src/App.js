@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Team from "./components/team";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/navbar";
+import Data from "./components/getData"
 import footer from "./components/footer";
 
 function App() {
@@ -25,6 +26,11 @@ function App() {
             <Route path="/about" element={<><Navbar /><About /></>} />
             <Route path="/home" element={<><Navbar/> <Home /> </>} />
             <Route path="/team" element={<><Navbar /><Team /></>} />
+            <Route path="/getData" element={<><Navbar />
+            <Data />
+            
+            
+            </>} />
 
           </Routes>
         </div>

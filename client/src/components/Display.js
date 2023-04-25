@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Display.css";
+import { Link } from "react-router-dom";
 const Display = ({ contract, account }) => {
   const [data, setData] = useState("");
   const getdata = async () => {
@@ -48,9 +49,11 @@ const Display = ({ contract, account }) => {
           type="text"
           placeholder="Enter Address"
           className="address" />
-        <button className="center button" onClick={getdata}>
-          Get Data
-        </button>
+        <a href="/getData">
+          <button className="center button" onClick={getdata}>
+            Get Data
+          </button>
+        </a>
       </div>
     </>
   );
