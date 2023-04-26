@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { Link } from "react-router-dom";
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo_project.png'
 import './navbar.css';
 
 
@@ -33,7 +33,9 @@ const Navbar = () => {
         <div className='gpt3__navbar'>
             <div className='gpt3__navbar-links'>
                 <div className='gpt3__navbar-links_logo'>
-                    <img src='' alt="logo" />
+                    <Link to="/">
+                    <img src={Logo} alt="logo" />
+                    </Link>
                 </div>
                 <div className='gpt3__navbar-links_container'>
                     <Menu />

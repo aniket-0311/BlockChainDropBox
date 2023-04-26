@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import "./FileUpload.css";
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No image selected");
@@ -49,7 +51,8 @@ const FileUpload = ({ contract, account, provider }) => {
     <div className="top">
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="file-upload" className="choose">
-          Choose Image
+        <AttachFileIcon />
+        Choose Image
         </label>
         <input
           disabled={!account}
@@ -60,6 +63,7 @@ const FileUpload = ({ contract, account, provider }) => {
         />
         <span className="textArea">Image: {fileName}</span>
         <button type="submit" className="upload" disabled={!file}>
+        <FileUploadIcon /> 
           Upload File
         </button>
       </form>

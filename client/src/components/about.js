@@ -5,7 +5,7 @@ function about() {
   return (
     <>
 
-      <div className='About bg_gradient_about'>
+      <div className='About '>
         <div className='title'>
           <h1 className='title_head'>Decentralised Dropbox</h1> </div>
         <div className='para'> <p>Lorem ipsum dolor sit amet. Est atque explicabo quo omnis laborum sed sint autem ut impedit dolor qui ipsa consequatur sit eligendi molestiae. Ab expedita facilis et vitae nobis qui consequatur minus aut ipsum quibusdam ea beatae inventore et sapiente labore. Sit rerum repellendus eum praesentium ratione ex illo deleniti ut repudiandae unde sed galisum officiis?
