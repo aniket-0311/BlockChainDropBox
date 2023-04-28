@@ -6,7 +6,10 @@
 
   margin: 10px;
 }
-
+.data-back{
+  background-color: black;
+  /* opacity: 0.5; */
+}
 .image-list img {
   width: 250px;
   height: 350px;

@@ -4,7 +4,7 @@ function card() {
     return (
         <>
             <div class="box">
-                <div class="card">
+                <div class="card-team">
                     <div class="imgBx">
                         <img src="" alt="images" />
                     </div>

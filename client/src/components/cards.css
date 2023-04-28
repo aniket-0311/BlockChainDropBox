@@ -5,7 +5,7 @@
     grid-gap: 15px;
     margin: 0 auto;
   }
-  .card{
+  .card-team{
     position: relative;
     width: 300px;
     height: 350px;
@@ -24,8 +24,8 @@
       border-bottom: #fefefe;
     
     }
-.card:before,
-  .card:after
+.card-team:before,
+  .card-team:after
   {
     content:"";
     position: absolute;
