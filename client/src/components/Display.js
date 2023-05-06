@@ -9,11 +9,13 @@ const Display = ({ contract, account }) => {
     try {
       if (Otheraddress) {
         dataArray = await contract.display(Otheraddress);
-        console.log(dataArray);
+        console.log("dataArray",dataArray);
       } else {
         dataArray = await contract.display(account);
+        console.log("dataArray",dataArray);
       }
     } catch (e) {
+      console.log(e)
       alert("You don't have access");
     }
     const isEmpty = Object.keys(dataArray).length === 0;
@@ -22,18 +24,21 @@ const Display = ({ contract, account }) => {
       const str = dataArray.toString();
       const str_array = str.split(",");
       // console.log(str);
-      // console.log(str_array);
+      console.log(str_array);
       const images = str_array.map((item, i) => {
+        console.log("item",item)
+        console.log("i",i)
         return (
-          <a href={item} key={i} target="_blank">
-            <div className="card data-back">
-
-              <img
-                key={i}
-                src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-                alt="new"
-                className="image-list"
-              ></img>
+          <a href={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} key={i} target="_blank">
+            <div className = "container">
+              {/* <article> */}
+                <img
+                  key={i}
+                  src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+                  alt="file"
+                  // className="image-list"
+                ></img>
+              {/* </article> */}
             </div>
           </a>
         );
@@ -45,10 +50,7 @@ const Display = ({ contract, account }) => {
   };
   return (
     <>
-      <div className="image-list">
-
-        {data}
-      </div>
+      
       <div className="address-fields">
 
         <input
@@ -56,17 +58,13 @@ const Display = ({ contract, account }) => {
           placeholder="Enter Address"
           className="address" />
 
-        {/* <a href="/getData"> */}
         <button className="center button" onClick={getdata}>
           Get Data
         </button>
-        {/* <div class="card">
-          <div class="imgBx">
-            <img src="" alt="images" />
-          </div>
-        </div> */}
-        {/* </a> */}
 
+        <div className="grid">
+        {data}
+      </div>
       </div>
     </>
   );

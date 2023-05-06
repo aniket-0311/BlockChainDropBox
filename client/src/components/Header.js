@@ -7,7 +7,7 @@ const Header = () => {
     <div className='gpt3__header section__padding' id='home'>
       <div className='gpt3__header-content'>
         <h1 className='gradient__text'>Let's Utilize the most accumulated decentralised database</h1>
-        <p >dsjkfnskf sdkjbfdsbfksd sfbsjfbs dbfdsbfs dsubfkdsbf djjdjdfnfs sjkdbfds fsdjksjkds vsdkk </p>
+        {/* <p >dsjkfnskf sdkjbfdsbfksd sfbsjfbs dbfdsbfs dsubfkdsbf djjdjdfnfs sjkdbfds fsdjksjkds vsdkk </p> */}
         <div className='gpt3__getstarted'>
                 <Link to="home">
                     <button type='button'>Get Started</button>

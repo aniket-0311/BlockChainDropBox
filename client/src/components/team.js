@@ -6,7 +6,7 @@ function team() {
     <>
       <div className='team_container '>
         <div className='team_title'>
-          <h1 className='heading_team'> Our Team</h1>
+          <h1 className='heading_team gradient__text'> Our Team</h1>
         </div>
         <div className='card_container'>
           <Card />
