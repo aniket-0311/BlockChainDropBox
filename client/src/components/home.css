@@ -105,11 +105,13 @@
     padding: 16px;
     margin-top: 10px;
     vertical-align: center;
-    background: #f44336;
-    width: 70px;
+    background: #110504;
+    width: 75px;
     height: 45px;
     color: white;
+    font-weight: 500;
     border: none;
+    text-transform: uppercase;
     border-radius: 4px;
     font-size: 13px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
