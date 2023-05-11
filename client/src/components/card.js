@@ -1,6 +1,7 @@
 import React from 'react'
 import TeamImage from '../assets/AniketTeam.jpeg'
 import TeamImage1 from '../assets/DakshTeam.jpg'
+import TeamImage2 from '../assets/mukesh.jpg'
 import './cards.css';
 function card() {
     return (
@@ -26,7 +27,7 @@ function card() {
 
        <div class="card">
          <div class="imgBx">
-            <img src="" alt="images"/>
+            <img src={TeamImage2} alt="images"/>
          </div>
          <div class="details">
             <h2>Mukesh Choudhary<br/><span>Backend Developer</span></h2>

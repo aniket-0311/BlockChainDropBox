@@ -6,18 +6,20 @@
 
   margin: 10px;
 }
-.data-back{
+
+.data-back {
   /* background-color: rgb(239, 226, 226); */
   width: 1200;
-  margin : 0 auto;
- 
+  margin: 0 auto;
+
 }
+
 .image-list img {
   width: 250px;
   height: 350px;
-  margin : 0 auto;
+  margin: 0 auto;
   border-radius: 4px;
-  box-shadow:0 2px 10px rgba(235, 21, 21, 0.991);
+  box-shadow: 0 2px 10px rgba(235, 21, 21, 0.991);
 }
 
 .center {
@@ -36,9 +38,11 @@
   margin-right: 10px;
   padding-bottom: 10px;
 }
+
 .button:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
+
 .address {
   display: block;
   margin: auto;
@@ -50,7 +54,8 @@
 input[type="text"]:focus {
   background-color: lightblue;
 }
-.address-fields{
+
+.address-fields {
   text-align: center;
 }
 
@@ -66,10 +71,38 @@ input[type="text"]:focus {
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 } */
 
+.container_g {
+  transition: 0.5s ease;
+  background-color: #051024c9;
+  /* max-width: 300px; */
+  border-radius: 0.5rem;
+  /* background-color: #fff; */
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4), 0px 7px 13px -3px rgba(255, 255, 255, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.2);
+  border: 1px solid transparent;
+
+}
+
+/* .container_g:hover {
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4), 0px 7px 13px -3px rgba(255, 255, 255, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.2);
+} */
+
+.container-content {
+  padding: 1.1rem;
+}
+
+.title {
+  color: #c2c7d2;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 .grid img {
   max-width: 100%;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px yellow
+  border: 5px solid #ffffff;
+
+  /* box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px, rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(222, 222, 222, 0.07) 0px 4px 8px, rgba(255, 255, 255, 0.07) 0px 8px 16px, rgba(255, 255, 255, 0.07) 0px 16px 32px, rgba(255, 255, 255, 0.07) 0px 32px 64px; */
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
 }
 
 .grid .text {
