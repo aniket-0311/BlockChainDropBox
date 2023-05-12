@@ -74,7 +74,7 @@ input[type="text"]:focus {
 .container_g {
   transition: 0.5s ease;
   background-color: #051024c9;
-  /* max-width: 300px; */
+  margin: 8px 18px;
   border-radius: 0.5rem;
   /* background-color: #fff; */
   box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4), 0px 7px 13px -3px rgba(255, 255, 255, 0.3), inset 0px -3px 0px rgba(255, 255, 255, 0.2);
@@ -99,7 +99,8 @@ input[type="text"]:focus {
 
 .grid img {
   max-width: 100%;
-  border: 5px solid #ffffff;
+  border: 1px solid #ffffff;
+  max-height: 100%;
 
   /* box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px, rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(222, 222, 222, 0.07) 0px 4px 8px, rgba(255, 255, 255, 0.07) 0px 8px 16px, rgba(255, 255, 255, 0.07) 0px 16px 32px, rgba(255, 255, 255, 0.07) 0px 32px 64px; */
   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
