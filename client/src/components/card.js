@@ -12,7 +12,7 @@ function card() {
             <img src={TeamImage} alt="images"/>
         </div>
         <div class="details">
-            <h2>Aniket Desai<br/><span>Backend Developer</span></h2>
+            <h2>Aniket Desai<br/><span>Frontend & Backend Developer</span></h2>
         </div>
       </div>
     

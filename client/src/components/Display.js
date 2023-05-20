@@ -57,18 +57,20 @@ const Display = ({ contract, account }) => {
 
       <div className="address-fields">
 
-        <input
+        {/* <input
           type="text"
           placeholder="Enter Address"
-          className="address" />
+          className="address" /> */}
 
-        <button className="center button" onClick={getdata}>
+        <a href='/getData' className="center button">
           Get Data
-        </button>
+        </a>
 
         <div className="grid">
           {data}
         </div>
+        
+        
       </div>
     </>
   );

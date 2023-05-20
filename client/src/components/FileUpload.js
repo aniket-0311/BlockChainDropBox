@@ -5,7 +5,7 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
-  const [fileName, setFileName] = useState("No image selected");
+  const [fileName, setFileName] = useState("No file selected");
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (file) {
@@ -29,11 +29,11 @@ const FileUpload = ({ contract, account, provider }) => {
         const signer = contract.connect(provider.getSigner());
         signer.add(account, ImgHash);
       } catch (e) {
-        alert("Unable to upload image to Pinata");
+        alert("Unable to upload file to Pinata");
       }
     }
-    alert("Image Uploading Initialised....");
-    setFileName("No image selected");
+    alert("File Uploading Initialised....");
+    setFileName("No File selected");
     setFile(null);
   };
   const retrieveFile = (e) => {
@@ -48,12 +48,21 @@ const FileUpload = ({ contract, account, provider }) => {
     e.preventDefault();
   };
   return (
-    <div className="top">
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="file-upload" className="choose">
-        <AttachFileIcon />
-        Choose Image
+
+    <div class="conatin">
+  <form onSubmit={handleSubmit}>
+    <div class="CARD">
+
+      <h3>Upload Files</h3>
+      <div class="drop_box">
+        <header>
+          <h4>File: {fileName}</h4>
+        </header>
+
+        <label htmlFor="file-upload" className="btn">
+         Choose Image
         </label>
+
         <input
           disabled={!account}
           type="file"
@@ -61,13 +70,38 @@ const FileUpload = ({ contract, account, provider }) => {
           name="data"
           onChange={retrieveFile}
         />
-        <span className="textArea">Image: {fileName}</span>
-        <button type="submit" className="upload" disabled={!file}>
+      </div>
+      <button type="submit" className="upload" disabled={!file}>
         <FileUploadIcon /> 
           Upload File
-        </button>
-      </form>
+      </button>
+      
     </div>
+  </form>    
+  
+</div>
+    // <div className="top">
+    //   <form className="form" onSubmit={handleSubmit}>
+    //     <label htmlFor="file-upload" className="choose">
+    //     <AttachFileIcon />
+    //     Choose Image
+    //     </label>
+    //     <input
+    //       disabled={!account}
+    //       type="file"
+    //       id="file-upload"
+    //       name="data"
+    //       onChange={retrieveFile}
+    //     />
+    //     <span className="textArea">Image: {fileName}</span>
+    //     <button type="submit" className="upload" disabled={!file}>
+    //     <FileUploadIcon /> 
+    //       Upload File
+    //     </button>
+    //   </form>
+    // </div>
+
+    
   );
 };
 export default FileUpload;
