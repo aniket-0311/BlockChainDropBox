@@ -58,7 +58,7 @@ function Home() {
       <div className='home'>
         <div className='accountHeader'>
 
-          <h1 style={{ color: "white" }}>Decentralised Dropbox</h1>
+          <h1 className = 'gradient__text'>Decentralised Dropbox</h1>
           {/* <div className="bg"></div>
         <div className="bg bg2"></div>
       <div className="bg bg3"></div> */}

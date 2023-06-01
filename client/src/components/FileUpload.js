@@ -2,10 +2,10 @@ import { useState } from "react";
 import axios from "axios";
 import "./FileUpload.css";
 import FileUploadIcon from '@mui/icons-material/FileUpload';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
+// import AttachFileIcon from '@mui/icons-material/AttachFile';
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
-  const [fileName, setFileName] = useState("No image selected");
+  const [fileName, setFileName] = useState("No file selected");
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (file) {
@@ -18,8 +18,8 @@ const FileUpload = ({ contract, account, provider }) => {
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
           data: formData,
           headers: {
-            pinata_api_key: `fe60539dac57b176fccf`,
-            pinata_secret_api_key: `5d7190157fd3c11fcee7fdb237ae46c77391326074855f30709855c849768de4`,
+            pinata_api_key: `5db65e1bb1214a6328e6`,
+            pinata_secret_api_key: `ecac6594377b072f67ba89a6118bf7206224d2251f32e07ea8210dda85f8810c`,
             "Content-Type": "multipart/form-data",
           },
         });
@@ -29,11 +29,11 @@ const FileUpload = ({ contract, account, provider }) => {
         const signer = contract.connect(provider.getSigner());
         signer.add(account, ImgHash);
       } catch (e) {
-        alert("Unable to upload image to Pinata");
+        alert("Unable to upload file to Pinata");
       }
     }
-    alert("Image Uploading Initialised....");
-    setFileName("No image selected");
+    alert("File Uploading Initialised....");
+    setFileName("No File selected");
     setFile(null);
   };
   const retrieveFile = (e) => {
@@ -48,12 +48,21 @@ const FileUpload = ({ contract, account, provider }) => {
     e.preventDefault();
   };
   return (
-    <div className="top">
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="file-upload" className="choose">
-        <AttachFileIcon />
-        Choose Image
+
+    <div class="conatin">
+  <form onSubmit={handleSubmit}>
+    <div class="CARD">
+
+      <h3>Upload Files</h3>
+      <div class="drop_box">
+        <header>
+          <h4>File: {fileName}</h4>
+        </header>
+
+        <label htmlFor="file-upload" className="btn">
+         Choose Image
         </label>
+
         <input
           disabled={!account}
           type="file"
@@ -61,13 +70,38 @@ const FileUpload = ({ contract, account, provider }) => {
           name="data"
           onChange={retrieveFile}
         />
-        <span className="textArea">Image: {fileName}</span>
-        <button type="submit" className="upload" disabled={!file}>
+      </div>
+      <button type="submit" className="upload" disabled={!file}>
         <FileUploadIcon /> 
           Upload File
-        </button>
-      </form>
+      </button>
+      
     </div>
+  </form>    
+  
+</div>
+    // <div className="top">
+    //   <form className="form" onSubmit={handleSubmit}>
+    //     <label htmlFor="file-upload" className="choose">
+    //     <AttachFileIcon />
+    //     Choose Image
+    //     </label>
+    //     <input
+    //       disabled={!account}
+    //       type="file"
+    //       id="file-upload"
+    //       name="data"
+    //       onChange={retrieveFile}
+    //     />
+    //     <span className="textArea">Image: {fileName}</span>
+    //     <button type="submit" className="upload" disabled={!file}>
+    //     <FileUploadIcon /> 
+    //       Upload File
+    //     </button>
+    //   </form>
+    // </div>
+
+    
   );
 };
 export default FileUpload;
