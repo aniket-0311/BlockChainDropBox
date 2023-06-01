@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./FileUpload.css";
 import FileUploadIcon from '@mui/icons-material/FileUpload';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
+// import AttachFileIcon from '@mui/icons-material/AttachFile';
 const FileUpload = ({ contract, account, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("No file selected");

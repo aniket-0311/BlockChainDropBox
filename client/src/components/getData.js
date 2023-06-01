@@ -3,8 +3,8 @@ import Upload from "../artifacts/contracts/Upload.sol/Upload.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 
-import FileUpload from './FileUpload';
-import Display from './Display';
+// import FileUpload from './FileUpload';
+// import Display from './Display';
 import Modal from './Modal';
 import "./Modal.css";
 
@@ -86,7 +86,7 @@ function GetData() {
               // className="image-list"
               ></img>
               <div class="container-content">
-                <span className="title">document-{i + 1}</span>
+                <span className="title">Document-{i + 1}</span>
               </div>
               {/* </article> */}
             </div>
